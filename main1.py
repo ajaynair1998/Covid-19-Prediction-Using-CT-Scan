@@ -67,7 +67,7 @@ model = Sequential([
            strides=(2, 2), padding='same', activation=tf.keras.activations.sigmoid),
     ReLU(),
     MaxPooling2D(pool_size=(2, 2), strides=(1, 1), padding='same'),
-    Conv2D(1024, strides=(1, 1), padding='same', kernel_size=(2, 2), input_shape=(256, 256, 1), activation=tf.keras.
+    Conv2D(1024, strides=(1, 1), padding='same', kernel_size=(2, 2), activation=tf.keras.
            activations.sigmoid),
     ReLU(),
     MaxPooling2D(pool_size=(3, 3), strides=(2, 2), padding='same'),
