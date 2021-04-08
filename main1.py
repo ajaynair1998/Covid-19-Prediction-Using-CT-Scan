@@ -40,8 +40,8 @@ __dirname = os.path.dirname(os.path.realpath(__file__))
 train_path = os.path.join(__dirname, train_path)
 validation_path = os.path.join(__dirname, validation_path)
 
-# probably samplewise_std_normalization is zerocentre normalisation
-train_batches = ImageDataGenerator(samplewise_std_normalization=True). \
+# probably samplewise_std_normalization is zerocentre normalisation(samplewise_std_normalization=True)
+train_batches = ImageDataGenerator(rescale=1.0/255.0). \
     flow_from_directory(directory=train_path,
                         target_size=(512, 512),
                         color_mode='grayscale',
@@ -49,8 +49,8 @@ train_batches = ImageDataGenerator(samplewise_std_normalization=True). \
                         batch_size=10,
                         shuffle=True,
                         )
-
-validation_batches = ImageDataGenerator(samplewise_std_normalization=True). \
+# probably samplewise_std_normalization is zerocentre normalisation(samplewise_std_normalization=True)
+validation_batches = ImageDataGenerator(rescale=1.0/255.0). \
     flow_from_directory(directory=validation_path,
                         target_size=(512, 512),
                         color_mode='grayscale',
