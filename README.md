@@ -4,7 +4,7 @@ Data Used-
 https://drive.google.com/file/d/1uX2Tqoa4b6n972T4eXvEVLSIE3nZEGIW/view?usp=sharing  \
 
 Parameters in Convolutional Layer-(k->width of Kernal,C->No: of Channels,Number of Kernals) \
-Weights-(k^2) &nbsp; x C x &nbsp; N \
+Weights-(k^2) &nbsp; X C X &nbsp; N \
 Bias-N 
 
 
