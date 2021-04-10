@@ -64,7 +64,7 @@ print(train_batches.class_indices, train_batches_iterator.next())
 # havent found out how to set initial bias yet
 model = Sequential([
     Conv2D(512, input_shape=(512, 512, 1), kernel_size=(2, 2),
-           strides=(2, 2), padding='same', activation=tf.keras.activations.sigmoid),
+           strides=(1, 1), padding='same', activation=tf.keras.activations.sigmoid),
     ReLU(),
     MaxPooling2D(pool_size=(2, 2), strides=(1, 1), padding='same'),
     Conv2D(1024, strides=(1, 1), padding='same', kernel_size=(2, 2), activation=tf.keras.
