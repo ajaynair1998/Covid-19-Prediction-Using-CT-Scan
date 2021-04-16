@@ -46,7 +46,7 @@ train_batches = ImageDataGenerator(rescale=1.0/255.0). \
                         target_size=(512, 512),
                         color_mode='grayscale',
                         classes=['negative', 'positive'],
-                        batch_size=10,
+                        batch_size=1,
                         shuffle=True,
                         )
 # probably samplewise_std_normalization is zerocentre normalisation(samplewise_std_normalization=True)
